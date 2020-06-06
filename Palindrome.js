@@ -2,7 +2,8 @@
 function palindrome(str) 
 {
   // Now we take the original value & convert all the characters into lower case.
-  // The 'W' is used for avoiding all the non-alphanumeric characters.
+  // The '\W' is generally used for accessing all alphanumeric characters.
+  // Here we are avoiding all the non-alphanumeric characters by replace property.
   var original = str.toLowerCase().replace(/[\W_]+/g,"");
   // Now we are telling the function to read from backside.
   var backwards = original.split("").reverse().join("");
